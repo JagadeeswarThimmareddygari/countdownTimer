@@ -22,12 +22,15 @@ countdown=()=>{
      
     
     daysE1.innerHTML=days;
-    hoursE1.innerHTML=hours;
-    minsE1.innerHTML=minutes;
-    secondsE1.innerHTML=seconds;
+    hoursE1.innerHTML=formatTime(hours);
+    minsE1.innerHTML=formatTime(minutes);
+    secondsE1.innerHTML=formatTime(seconds);
     console.log(days)
 
     console.log(days, hours, minutes, seconds)
+}
+function formatTime(time){
+    return time<10?`0${time}`:time;
 }
 
 countdown();
